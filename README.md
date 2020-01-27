@@ -1,5 +1,17 @@
 # SOLAR_GP_ROS
 
+## Demonstrations
+
+### n-Link Manipulators
+
+### Baxter Query Point
+
+### Baxter Path Following
+
+### Baxter Pickup Task
+
+### Real Baxter Live teleoperation
+
 ## Getting Started
 
 ### Dependencies
