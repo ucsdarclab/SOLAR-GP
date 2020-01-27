@@ -9,6 +9,7 @@
 ### Baxter Path Following
 
 ### Baxter Pickup Task
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/BaxterPickup.gif)
 
 ### Real Baxter Live teleoperation
 
