@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="tel_pub_rate" default="10" />
+  <arg name="teleop_device" default ="bag" />
+  <arg name="bag_file" default ="/home/bpwilcox/catkin_ws/name.bag" />
+
+
+  <node pkg="tf" type="static_transform_publisher" name="telop_tf"
+		args="0 0 0 0 0 0 base teleop 100" />
+
+  <node name="teleop_node" pkg="bwrobot" type="teleop_stream.py">
+  	<param name="teleop_pub_rate" value="$(arg tel_pub_rate)" />
+	<param name="device" value="$(arg teleop_device)" />
+	<param name="trajectory_filename" value="$(arg bag_file)" />
+  </node>
+
+</launch>

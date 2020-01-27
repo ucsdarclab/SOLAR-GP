@@ -1,0 +1,25 @@
+<launch>
+
+  <arg name="jit_init" default ="25" />
+  <arg name="deg" default ="3" />
+  <arg name="joint_init" default ="[0.67, 1.03, -0.5, -1.19, 1.94,-0.08,-1.0]" />
+  <arg name="tr_pub_rate" default="100" />
+  <arg name="num_ind" default ="25" />
+  <arg name="w_thresh" default ="0.975" />
+  <arg name="drift_num" default ="1" />
+  <arg name="which_arm" default ="left" />
+  <arg name="joint_names" default ="[s0, s1, e1, w1]" />
+
+  <node name="train_node" pkg="bwrobot" type="test_init.py">
+  	<param name="train_pub_rate" value="$(arg tr_pub_rate)" />
+  	<rosparam param ="YStart" subst_value="True">$(arg joint_init)</rosparam>
+  	<rosparam param ="joints" subst_value="True">$(arg joint_names)</rosparam>
+	<param name="njit" value="$(arg jit_init)" />
+	<param name="degree" value="$(arg deg)" />
+	<param name="num_inducing" value="$(arg num_ind)" />
+	<param name="wgen" value="$(arg w_thresh)" />
+	<param name="drift" value="$(arg drift_num)" />
+	<param name="arm" value="$(arg which_arm)" />
+  </node>
+
+</launch>

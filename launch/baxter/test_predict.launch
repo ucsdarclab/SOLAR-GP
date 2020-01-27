@@ -1,0 +1,38 @@
+<launch>
+
+  <arg name="js_pub_rate" default="100" />
+  <arg name="tel_pub_rate" default="10" />
+  <arg name="sequential" default="false" />
+  <arg name="dev" default="/dev/input/js0" />
+  <arg name="which_arm" default ="left" />
+  <arg name="joint_names" default ="[s0, s1, e1, w1]" />
+  <arg name="teleop_device" default ="bag" />
+  <arg name="bag_file" default ="/home/bpwilcox/catkin_ws/src/SOLAR_GP-ROS/bags/trajectories/test_left_1.bag" />
+  <arg name="filter_coefficient" default="0.2" />
+  <arg name="max_pred_distance" default="1" />
+
+  <node pkg="tf" type="static_transform_publisher" name="telop_tf"
+		args="0 0 0 0 0 0 base teleop 100" />
+
+  <node name="predict_node" pkg="bwrobot" type="baxter_predict_teleop.py">
+  	<param name="predict_pub_rate" value="$(arg js_pub_rate)" />
+  	<param name="wait_for_train" value="$(arg sequential)" />
+	<param name="arm" value="$(arg which_arm)" />
+	<param name="max_distance" value="$(arg max_pred_distance)" />
+  </node>
+
+
+  <node name="control_node" pkg="bwrobot" type="baxter_control.py">
+  	<rosparam param ="joints" subst_value="True">$(arg joint_names)</rosparam>
+	<param name="arm" value="$(arg which_arm)" />
+	<param name="filter_coef" value="$(arg filter_coefficient)" />
+  </node>
+
+
+  <node name="teleop_node" pkg="bwrobot" type="teleop_stream.py">
+  	<param name="teleop_pub_rate" value="$(arg tel_pub_rate)" />
+	<param name="device" value="$(arg teleop_device)" />
+	<param name="trajectory_filename" value="$(arg bag_file)" />
+  </node>
+
+</launch>

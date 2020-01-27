@@ -1,0 +1,21 @@
+<launch>
+
+  <arg name="model" default="$(find baxter_description)/urdf/baxter.urdf.xacro"/>
+  <arg name="gui" default="false" />
+	<arg name="rviz_config" default="$(find bwrobot)/rviz/baxter.rviz" />
+  <arg name="topics" default ="[joint_states]" />
+
+  <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
+
+<!--
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+		<param name="use_gui" value="$(arg gui)"/>
+		<param name="publish_default_positions" value="$(arg gui)"/>
+  	<rosparam param ="source_list" subst_value="True">$(arg topics)</rosparam>
+		<param name="rate" value="1"/>
+	</node>
+-->
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+</launch>

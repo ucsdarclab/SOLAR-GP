@@ -1,0 +1,4 @@
+int32 num_jit
+int32 degree
+---
+bool complete
