@@ -1,5 +1,5 @@
 # SOLAR-GP
-This repository contains an implementation of the Sparse, Online, Locally Adaptive Regression usign Gaussian Processes (SOLAR-GP) algorithm that is being presented in IEEE-RAL 2020.
+This repository contains an implementation of the Sparse, Online, Locally Adaptive Regression using Gaussian Processes (SOLAR-GP) algorithm that is being presented in IEEE-RAL 2020.
 The code in this repository is considered research and "experimental", so results may vary depending on hardware and configuration
 ## Demonstrations
 
