@@ -6,9 +6,9 @@ The code in this repository is considered research and "experimental", so result
 ### n-Link Manipulators
 2D Manipulators            |  3D Manipulators
 :-------------------------:|:-------------------------:
-![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/3link_pent.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/circle.gif)
-![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/4link_spiral.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/triangle.gif)
-![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/6link_star1.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/helix.gif)
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/3link_pent.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/triangle.gif)
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/4link_spiral.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/helix.gif)
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/6link_star1.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/Circle6Link3D.gif)
 ### Baxter Query Point
 ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/BaxterQuery.gif)
 
