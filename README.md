@@ -1,17 +1,25 @@
-# SOLAR_GP_ROS
-
+# SOLAR-GP
+This repository contains an implementation of the Sparse, Online, Locally Adaptive Regression usign Gaussian Processes (SOLAR-GP) algorithm that is being presented in IEEE-RAL 2020.
+The code in this repository is considered research and "experimental", so results may vary depending on hardware and configuration
 ## Demonstrations
 
 ### n-Link Manipulators
-
+2D Manipulators            |  3D Manipulators
+:-------------------------:|:-------------------------:
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/3link_pent.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/circle.gif)
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/4link_spiral.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/triangle.gif)
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/6link_star1.gif)  |  ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/helix.gif)
 ### Baxter Query Point
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/BaxterQuery.gif)
 
 ### Baxter Path Following
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/pathfollow.gif)
 
 ### Baxter Pickup Task
 ![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/BaxterPickup.gif)
 
 ### Real Baxter Live teleoperation
+![](https://github.com/bpwilcox/SOLAR-GP/blob/master/graphics/BaxterBox.gif)
 
 ## Getting Started
 
